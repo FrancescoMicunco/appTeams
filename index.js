@@ -6,20 +6,13 @@ let input = inputName.value
 
 function addNameToTheList(input) {
     let div = document.getElementById("divListName")
-    let ul = document.querySelectorAll("ul .list-group")
-    for (i = 0; i < teamList.length; i++) {
+    let ul = document.querySelector("ul.list-group")
+    ul.innerHTML = ""
+    for (i = 0; i < input.length; i++) {
         let newElement = document.createElement("li")
-        let name = teamList[i];
-        let listname = newElement.innerHTML = name;
-        /* let textInput = document.createTextNode(input)
-        newElement.classList.add("list-group-item"); */
-
-        console.log(listname)
+        newElement.innerText = input[i];
+        ul.appendChild(newElement)
     }
-    /* name.appendChild(newElement);
-    div.appendChild(ul)
-    console.log(newElement) */
-
 }
 
 
@@ -27,5 +20,5 @@ function addNameToTheList(input) {
 addButton.addEventListener("click", function(e) {
     teamList.push(inputName.value)
     inputName.value = "";
-    addNameToTheList();
+    addNameToTheList(teamList);
 })
