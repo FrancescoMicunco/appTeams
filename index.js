@@ -38,7 +38,6 @@ createTableBtn.addEventListener("click", function(e) {
         divTeam.classList.add(`team`); //create div container
         divTeam.innerHTML = ""; //create div container
         let title = document.createElement("h3");
-
         title.innerText = "TEAM n. " + (i + 1);
         divTeam.appendChild(title);
         tableTeam.appendChild(divTeam)
