@@ -55,11 +55,10 @@ assign.addEventListener("click", function(e) {
         let randomElement = Math.floor(Math.random() * (numberOfTeam) + 1);
         console.log(randomElement);
         // genera un numero casuale compreso tra 1 e il numero dei numberOfTeam  OK
-        teamList.splice([randomElement - 1], 1);
+        teamList.splice([randomElement - 1], 1); // erase element from the array
         console.log(teamList)
             // associalo all'elemento dell'array corrispondente al numero generato. OK
             // prendi l'elemento e inseriscilo in una variabile temporanea
-            //  
             // trasferiscilo nel primo team libero
     } else {
         alert("inserire un numero di team")
